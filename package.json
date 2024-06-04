@@ -1,7 +1,7 @@
 {
   "name": "features-manager",
   "description": "A lightweight TypeScript-based feature flag manager that enables conditional feature activation based on user-specific rules and percentage rollouts.",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
