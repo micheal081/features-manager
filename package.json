@@ -1,0 +1,32 @@
+{
+  "name": "features-manager",
+  "description": "A lightweight TypeScript-based feature flag manager that enables conditional feature activation based on user-specific rules and percentage rollouts.",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/micheal081/features-manager.git"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "Features Manager",
+    "TypeScript",
+    "Conditional Activation",
+    "User-Specific Rules",
+    "Percentage Rollouts",
+    "Feature Management",
+    "Toggle",
+    "Configuration",
+    "Deployment",
+    "AB Testing"
+  ],
+  "author": "Micheal Ighietsemhe",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.1.0",
+    "typescript": "^5.4.5"
+  }
+}
