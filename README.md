@@ -40,6 +40,13 @@ const featureFlag = new FeaturesManager({
       enabled: true,
       users: ['john_doe'],
     },
+    betaFeature: {
+      enabled: true,
+      percentage: 50,
+    },
+    stableFeature: {
+      enabled: true,
+    },
   },
 });
 ```
@@ -71,6 +78,14 @@ console.log(`Is Dark Mode Enabled: ${isDarkModeEnabled}`); // false
 // Check if the 'premiumFeature' is enabled for the given user and location context
 const isPremiumFeatureEnabled = featureFlag.isFeatureEnabled('premiumFeature', userContext, locationContext);
 console.log(`Is Premium Feature Enabled: ${isPremiumFeatureEnabled}`); // true
+
+// Check if the 'betaFeature' is enabled for the given user
+const isBetaFeatureEnabled = featureFlag.isFeatureEnabled('betaFeature', userContext, locationContext);
+console.log(`Is Beta Feature Enabled: ${isBetaFeatureEnabled}`); // The output will be true or false based on percentage rollout
+
+// Check if the 'stableFeature' is enabled for the given user
+const isStableFeatureEnabled = featureFlag.isFeatureEnabled('stableFeature', userContext, locationContext);
+console.log(`Is Stable Feature Enabled: ${isStableFeatureEnabled}`); // true
 ```
 
 ### Sample Outputs
@@ -89,6 +104,19 @@ console.log(`Is Premium Feature Enabled: ${isPremiumFeatureEnabled}`); // true
 3. **Feature: premiumFeature**
    - User ID: `john_doe`
    - Output: `true` (enabled for this user)
+
+4. **Feature: betaFeature**
+   - User ID: `john_doe`
+   - Username: `john_doe`
+   - Location: `New York, New York, USA`
+   - Output: true or false (depends on percentage rollout)
+
+5. **Feature: stableFeature**
+   - User ID: `john_doe`
+   - Username: `john_doe`
+   - Location: `New York, New York, USA`
+   - Output: true (feature is enabled)
+
 
 ### Benefits
 
